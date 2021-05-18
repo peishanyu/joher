@@ -7,11 +7,11 @@ body {
 }
 
 a {
-  color: #009cea;
+  color: #5987f4;
 }
 
 a:hover {
-  color: #1eb4ff;
+  color: #6a97ff;
   text-decoration: none;
 }
 
@@ -38,13 +38,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #009cea;
+  background: #5987f4;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #14b1ff;
+  background: #6a97ff;
   color: #fff;
 }
 
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #009cea;
+  color: #5987f4;
   text-decoration: none;
 }
 
@@ -341,13 +341,26 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  background-image: url("../img/hero-bg.png");
+  background-image: url("../img/home_banner_bg.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right top;
+  background-size: cover;
+  background-position: center bottom;
   margin-top: 70px;
-  padding: 60px 0;
-  background: linear-gradient(180deg,#e1f1fe,#f6faff 26%,#92dfff 82%,#7ed6f8);
+  padding: 80px 0;
+}
+
+@media (max-width: 769px) {
+  #hero {
+    background-image: url("../img/home_banner_bg_h5.jpg");
+  }
+}
+
+/* Portrait*/
+@media (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait)  {
+  #hero {
+    background-image: url("../img/home_banner_bg.jpg");
+    background-attachment: unset!important;
+  }
 }
 
 #hero h1 {
@@ -375,19 +388,29 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
   transition: 0.5s;
   color: #fff;
-  background: #009cea;
+  background: #5987f4;
 }
 
 #hero .btn-get-started:hover {
-  background: #008bd1;
+  background:#6a97ff;
 }
 
 #hero .hero-img {
   text-align: center;
+  position: relative;
 }
 
 #hero .hero-img img {
   width: 70%;
+  position: absolute;
+  width: 70%;
+  bottom: -70%;
+  left:0;
+}
+
+#hero .main-slogan {
+  max-height:180px;
+  margin-bottom:25px;
 }
 
 @media (min-width: 1024px) {
@@ -405,6 +428,31 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
   }
 }
+
+@media (max-width: 769px) {
+  #hero .hero-img img {
+    position: unset;
+    width: 70%;
+    bottom: -70%;
+    left:0;
+  }
+}
+
+@media (max-width: 540px) {
+  #hero {
+    padding: 60px 0;
+  }
+  #hero .main-slogan {
+    max-height:120px;
+  }
+}
+
+@media (max-width: 321px) {
+  #hero .main-slogan {
+    max-height:80px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -793,18 +841,19 @@ section {
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 30px;
+  padding: 12px 30px;
   border-radius: 4px;
   transition: 0.5s;
   margin: 10px;
   color: #fff;
-  background: #009cea;
+  background: #06C755;
 }
 
 .cta .cta-btn:hover {
-  background: #008bd1;
+  background: #09d15c;
 }
+
+.cta .cta-btn img {width:30px;margin-left:10px;}
 
 @media (min-width: 1024px) {
   .cta {
@@ -817,6 +866,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+}
+
+@media (max-width: 769px) {
+  .cta .cta-btn-container {
+    margin-top:20px;
   }
 }
 
@@ -1043,114 +1098,6 @@ section {
   transition: all 0.4s ease-in-out;
 }
 
-/*--------------------------------------------------------------
-# Pricing
---------------------------------------------------------------*/
-.pricing .box {
-  padding: 20px;
-  background: #fff;
-  text-align: center;
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #e9ecee;
-}
-
-.pricing h3 {
-  font-weight: 400;
-  padding: 20px 15px;
-  font-size: 18px;
-  font-weight: 400;
-  color: #777777;
-}
-
-.pricing h4 {
-  font-size: 36px;
-  color: #009cea;
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Noto Sans TC", "Source Han Sans", "Microsoft JhengHei", 微軟正黑體, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  margin-bottom: 20px;
-}
-
-.pricing h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing h4 span {
-  color: #bababa;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing ul {
-  padding: 0;
-  list-style: none;
-  color: #444444;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing ul li {
-  padding-bottom: 16px;
-}
-
-.pricing ul i {
-  color: #009cea;
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-.pricing ul .na {
-  color: #ccc;
-  text-decoration: line-through;
-}
-
-.pricing .btn-wrap {
-  padding: 20px 15px;
-  text-align: center;
-}
-
-.pricing .btn-buy {
-  background: #009cea;
-  display: inline-block;
-  padding: 8px 30px;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Noto Sans TC", "Source Han Sans", "Microsoft JhengHei", 微軟正黑體, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.pricing .featured {
-  background: #009cea;
-  border-color: #009cea;
-}
-
-.pricing .featured h3, .pricing .featured h4, .pricing .featured h4 span, .pricing .featured ul, .pricing .featured ul .na {
-  color: #fff;
-}
-
-.pricing .featured .btn-buy {
-  background: #fff;
-  color: #009cea;
-}
-
-.pricing .advanced {
-  width: 200px;
-  position: absolute;
-  top: 18px;
-  right: -68px;
-  transform: rotate(45deg);
-  z-index: 1;
-  font-size: 14px;
-  padding: 1px 0 3px 0;
-  background: #009cea;
-  color: #fff;
-}
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
@@ -1171,7 +1118,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #009cea;
+  font-family: #5987f4;
   font-size: 18px;
   font-weight: 500;
 }
@@ -1189,7 +1136,7 @@ section {
 }
 
 .faq .faq-list a.collapse {
-  color: #009cea;
+  color: #5987f4;
 }
 
 .faq .faq-list a.collapsed {
@@ -1197,7 +1144,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #009cea;
+  color: #5987f4;
 }
 
 .faq .faq-list a.collapsed i::before {
@@ -1346,7 +1293,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #009cea;
+  background: #5987f4;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1355,7 +1302,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #1eb4ff;
+  background:#6a97ff;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1373,121 +1320,6 @@ section {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 15px 0;
-  background: #f4f6f7;
-  min-height: 40px;
-  margin-top: 70px;
-}
-
-.breadcrumbs h2 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0 0 10px 0;
-  margin: 0;
-  font-size: 14px;
-}
-
-.breadcrumbs ol li + li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li + li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #4c5c63;
-  content: "/";
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details .portfolio-details-container {
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-carousel {
-  position: relative;
-  z-index: 1;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
-  margin-top: 5px;
-  text-align: left;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot {
-  display: inline-block;
-  margin: 0 10px 0 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd !important;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #009cea !important;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  position: absolute;
-  right: 0;
-  bottom: -70px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 50px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  width: 50%;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0 0 0 0;
-}
-
-@media (max-width: 768px) {
-  .portfolio-details .portfolio-info {
-    position: static;
-    margin-top: 30px;
   }
 }
 
@@ -1544,7 +1376,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #009cea;
+  background: #5987f4;
   color: #fff;
   text-decoration: none;
 }
@@ -1569,7 +1401,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #009cea;
+  color: #5987f4;
   font-size: 18px;
   line-height: 1;
   margin-left: -5px;
@@ -1593,7 +1425,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #009cea;
+  color: #5987f4;
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1620,7 +1452,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #009cea;
+  background: #5987f4;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
