@@ -38,13 +38,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #5987f4;
+  background: #d5b381;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #6a97ff;
+  background: #e6c087;
   color: #fff;
 }
 
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #5987f4;
+  color: #d4b381;
   text-decoration: none;
 }
 
@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #009cea;
+  color: #d5b381;
 }
 
 .mobile-nav {
@@ -388,11 +388,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
   transition: 0.5s;
   color: #fff;
-  background: #5987f4;
+  background: #d5b381;
 }
 
 #hero .btn-get-started:hover {
-  background:#6a97ff;
+  background:#e6c087;
 }
 
 #hero .hero-img {
@@ -404,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 70%;
   position: absolute;
   width: 70%;
-  bottom: -70%;
+  bottom: -50%;
   left:0;
 }
 
@@ -432,7 +432,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 769px) {
   #hero .hero-img img {
     position: unset;
-    width: 70%;
+    width: 85%;
     bottom: -70%;
     left:0;
   }
@@ -463,7 +463,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f7f8f9;
+  background: #f7f8f9;
 }
 
 .section-title {
@@ -612,9 +612,14 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+#services {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/cta-bg.jpg") center center;
+}
+
 .services .icon-box {
   width:100%;
-  padding: 30px;
+  padding: 10px;
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -628,6 +633,12 @@ section {
 
 .services .icon-box:hover {
   transform: translateY(-5px);
+}
+
+.services .icon-box .frame-gold {
+  padding: 10px;
+  border: 2px solid #e8c794;
+  border-radius:2px;
 }
 
 .services .icon i {
@@ -841,12 +852,13 @@ section {
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
-  padding: 12px 30px;
+  padding: 10px 25px;
   border-radius: 4px;
   transition: 0.5s;
   margin: 10px;
   color: #fff;
   background: #06C755;
+  line-height: 2;
 }
 
 .cta .cta-btn:hover {
@@ -949,7 +961,7 @@ section {
 }
 
 .testimonials .owl-dot.active {
-  background-color: #009cea !important;
+  background-color: #d5b381 !important;
 }
 
 @media (max-width: 767px) {
@@ -1164,7 +1176,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #009cea;
+  color: #d5b381;
   float: left;
   width: 44px;
   height: 44px;
@@ -1216,7 +1228,7 @@ section {
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #009cea;
+  background: #d5b381;
   color: #fff;
 }
 
@@ -1293,7 +1305,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #5987f4;
+  background: #d5b381;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1302,7 +1314,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background:#6a97ff;
+  background:#e6c087;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1425,7 +1437,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #5987f4;
+  color:#d5b381;
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1472,4 +1484,9 @@ section {
   text-align: center;
   font-size: 13px;
   color: #364146;
+}
+
+
+.form-control:focus {
+  border-color: #d5b381;
 }
