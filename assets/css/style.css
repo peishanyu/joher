@@ -146,11 +146,31 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   font-size: 15px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Noto Sans TC", "Source Han Sans", "Microsoft JhengHei", 微軟正黑體, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  z-index:2;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu .active > a, .nav-menu li:hover > a {
   color: #d4b381;
   text-decoration: none;
+}
+
+.nav-menu a::after {
+  content: '';
+  height: 6px;
+  width: 0%;
+  position: absolute;
+  bottom: 10px;
+  z-index: -1;
+  -webkit-transition: all 0.1s cubic-bezier(0.42, 0.16, 0.21, 0.93);
+  -o-transition: all 0.1s cubic-bezier(0.42, 0.16, 0.21, 0.93);
+  transition: all 0.1s cubic-bezier(0.42, 0.16, 0.21, 0.93);
+  background: #d4b381;
+  left: 12.5%;
+}
+
+.nav-menu li:hover > a::after, .nav-menu .active > a::after {
+  width:75%;
+  background: rgba(203, 148, 64, 0.4)
 }
 
 .nav-menu .drop-down ul {
@@ -404,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 70%;
   position: absolute;
   width: 70%;
-  bottom: -50%;
+  bottom: -35%;
   left:0;
 }
 
@@ -472,12 +492,25 @@ section {
 }
 
 .section-title h2 {
+  position: relative;
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 20px;
   padding-bottom: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Noto Sans TC", "Source Han Sans", "Microsoft JhengHei", 微軟正黑體, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #627680;
+  z-index:2;
+}
+
+.section-title h2::after, #cta h3::after {
+  content: "";
+  width: 140px;
+  height: 10px;
+  position: absolute;
+  bottom:0;
+  z-index:-1;
+  background: rgba(203, 148, 64, 0.4);
+  left: calc(50% - 70px);
 }
 
 .section-title p {
@@ -487,6 +520,18 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
+@media (max-width:768px) {
+  #about .section-title h2 {
+    font-size: 32px;
+    color: #627680;
+  }  
+}
+
+#about .section-title h2 {
+
+}
+
 .about {
   padding:40px 0;
   background: #f7f8f9;
@@ -636,7 +681,7 @@ section {
 }
 
 .frame-gold {
-  padding: 10px;
+  padding: 8px;
   border: 2px solid #e8c794;
   border-radius:2px;
 }
@@ -842,10 +887,30 @@ section {
 }
 
 .cta h3 {
-  color: #364146;
+  position: relative;
+  color: #627680;
   font-size: 28px;
   font-weight: 700;
 }
+
+#cta h3::after {
+  width: 110px;
+  background: rgba(203, 148, 64, 0.4);
+  left: 0;
+}
+
+@media (max-width:768px) {
+  .cta h3 {
+    color: #627680;
+    font-size: 32px;
+  }
+  #cta h3::after {
+    width: 110px;
+    left: calc(50% - 55px);
+  }
+}
+
+
 
 .cta p {
   color: #576971;
@@ -902,56 +967,11 @@ section {
   min-height: 320px;
 }
 
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  margin: -40px 0 0 40px;
-  position: relative;
-  z-index: 2;
-  border: 6px solid #fff;
+.testimonials .testimonial-item > div {
+  margin:10px;
+  padding:4px;
 }
 
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 45px;
-  color: #111;
-}
-
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: #999;
-  margin: 0 0 0 45px;
-}
-
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
-  color: #d8dee1;
-  font-size: 26px;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 15px 0 15px;
-  padding: 20px 20px 60px 20px;
-  background: #f4f6f7;
-  position: relative;
-  border-radius: 6px;
-  position: relative;
-  z-index: 1;
-}
 
 .testimonials .owl-nav, .testimonials .owl-dots {
   margin-top: 5px;
