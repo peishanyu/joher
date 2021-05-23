@@ -523,7 +523,7 @@ section {
 
 @media (max-width:768px) {
   #about .section-title h2 {
-    font-size: 32px;
+    font-size: 28px;
     color: #627680;
   }  
 }
@@ -545,7 +545,7 @@ section {
 
 @media (max-width: 992px) {
   .about .about-box {
-    padding: 30px;
+    padding: 10px;
   }
 }
 
@@ -688,6 +688,12 @@ section {
 
 .frame-gold.pd-l {
   padding: 30px;
+}
+
+@media (max-width: 540px) {
+  .frame-gold.pd-l  {
+    padding: 10px;
+  } 
 }
 
 .services .icon i {
