@@ -692,7 +692,7 @@ section {
 
 @media (max-width: 540px) {
   .frame-gold.pd-l  {
-    padding: 10px;
+    padding: 20px 10px;
   } 
 }
 
